@@ -747,4 +747,9 @@ Valid from:</comment>
   <data name="NuGetLicenseExpression_LicenseInvalidCharacters" xml:space="preserve">
     <value>The license identifier '{0}' contains invalid characters.</value>
   </data>
+  <data name="Error_LoadingHashFile" xml:space="preserve">
+    <value>Error parsing hash file {0} : {1}</value>
+    <comment>0 - hash file path
+1 - error message</comment>
+  </data>
 </root>
