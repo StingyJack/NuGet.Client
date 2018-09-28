@@ -416,14 +416,16 @@ namespace NuGet.Protocol.Core.Types
             }
             else
             {
-                var signedPackageVerifier = new PackageSignatureVerifier(SignatureVerificationProviderFactory.GetSignatureVerificationProviders());
-
                 var packageExtractionContext = new PackageExtractionContext(
                     PackageSaveMode.Defaultv3,
                     PackageExtractionBehavior.XmlDocFileSaveMode,
                     log,
+<<<<<<< HEAD
                     signedPackageVerifier,
                     SignedPackageVerifierSettings.GetClientPolicy(Settings, log));
+=======
+                    SignedPackageVerifierSettings.GetDefault());
+>>>>>>> 793ad0fc8... SignedPackageVerifierSettings should not have allowList information
 
                 var context = new OfflineFeedAddContext(pathToPackage,
                     root,
