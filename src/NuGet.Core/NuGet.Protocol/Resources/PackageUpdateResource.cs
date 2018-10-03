@@ -419,13 +419,8 @@ namespace NuGet.Protocol.Core.Types
                 var packageExtractionContext = new PackageExtractionContext(
                     PackageSaveMode.Defaultv3,
                     PackageExtractionBehavior.XmlDocFileSaveMode,
-                    log,
-<<<<<<< HEAD
-                    signedPackageVerifier,
-                    SignedPackageVerifierSettings.GetClientPolicy(Settings, log));
-=======
-                    SignedPackageVerifierSettings.GetDefault());
->>>>>>> 793ad0fc8... SignedPackageVerifierSettings should not have allowList information
+                    ClientPolicyContext.GetClientPolicy(Settings, log),
+                    log);
 
                 var context = new OfflineFeedAddContext(pathToPackage,
                     root,

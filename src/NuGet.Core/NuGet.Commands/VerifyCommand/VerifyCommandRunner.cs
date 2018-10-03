@@ -23,7 +23,6 @@ namespace NuGet.Commands
         private const int SuccessCode = 0;
         private const int FailureCode = 1;
         private const HashAlgorithmName _defaultFingerprintAlgorithm = HashAlgorithmName.SHA256;
-        private const bool RequireAllowList = false;
 
         public async Task<int> ExecuteCommandAsync(VerifyArgs verifyArgs)
         {
@@ -55,8 +54,7 @@ namespace NuGet.Commands
                     verificationProviders.Add(
                         new AllowListVerificationProvider(
                             allowListEntries,
-                            RequireAllowList,
-                            emptyListErrorMessage: Strings.Error_NoProvidedAllowList,
+                            requireNonEmptyAllowList: false,
                             noMatchErrorMessage: Strings.Error_NoMatchingCertificate));
                 }
 

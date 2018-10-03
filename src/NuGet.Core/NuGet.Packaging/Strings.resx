@@ -753,4 +753,10 @@ Valid from:</comment>
 1 - Fingerprint
 'allowUntrustedRoot' should not be localized</comment>
   </data>
+  <data name="DefaultError_EmptyAllowList" xml:space="preserve">
+    <value>A list of trusted signers is required but none was found.</value>
+  </data>
+  <data name="DefaultError_NoMatchInAllowList" xml:space="preserve">
+    <value>The package signature certificate fingerprint does not match any certificate fingerprint in allow list.</value>
+  </data>
 </root>
